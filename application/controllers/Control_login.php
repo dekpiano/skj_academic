@@ -46,12 +46,12 @@ class Control_login extends CI_Controller {
 				if($this->Model_login->record_count($username, $password) == 1)
 				{
 					$result = $this->Model_login->fetch_user_login($username, $password);
-					$this->session->set_userdata(array('login_id' => $result->StudentCode,'fullname'=> $result->StudentPrefix.$result->StudentFirstName.' '.$result->StudentLastName,'status'=> 'user','class' => $result->StudentClass));
+					$this->session->set_userdata(array('login_id' => $result->StudentID,'fullname'=> $result->StudentPrefix.$result->StudentFirstName.' '.$result->StudentLastName,'status'=> 'user','class' => $result->StudentClass));
 
 					set_cookie('username_cookie',$username,'3600'); 
 					set_cookie('password_cookie',$password,'3600');
 
-					$this->session->set_userdata(array('login_id' => $result->StudentCode,'fullname'=> $result->StudentPrefix.$result->StudentFirstName.' '.$result->StudentLastName,'status'=> 'user'));
+					$this->session->set_userdata(array('login_id' => $result->StudentID,'fullname'=> $result->StudentPrefix.$result->StudentFirstName.' '.$result->StudentLastName,'status'=> 'user'));
 
 				 redirect('Home');
 					//echo "Yes";

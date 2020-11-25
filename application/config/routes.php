@@ -56,3 +56,4 @@ $route['translate_uri_dashes'] = FALSE;
 $route['Logout'] = "Control_login/logout";
 
 $route['Home'] = "user/ConUser_Home/Home";
+$route['AcademicResult'] = "user/ConAcademicResult/score";

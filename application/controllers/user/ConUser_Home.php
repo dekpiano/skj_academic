@@ -15,9 +15,9 @@ var  $title = "แผงควบคุม";
 
     public function Home(){      
 
-        $this->load->view('layout/Header.php');
+        $this->load->view('user/layout/Header.php');
         $this->load->view('user/PageHome.php');
-        $this->load->view('layout/Footer.php');
+        $this->load->view('user/layout/Footer.php');
 
         // delete_cookie('username_cookie'); 
 		// delete_cookie('password_cookie'); 
