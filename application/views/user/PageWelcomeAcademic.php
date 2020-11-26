@@ -146,11 +146,15 @@
 </head>
 
 <body>
-    <div class="py-5 service-24">
+    <div class="service-24">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="site-heading text-center">
+         
+            <div class="row vh-100">
+                <div class="col-md-6 align-self-center">
+                <img src="<?=base_url('assets/images/img-home.png');?>" alt="" srcset="" class="img-fluid">
+                </div>
+                <div class="col-md-6 align-self-center">
+                    <div class="site-heading text-center">                    
                         <h2>ระบบงาน <span>วิชาการ</span></h2>
                         <h4>โรงเรียนสวนกุหลาบวิทยาลัย (จิรประวัติ) นครสวรรค์</h4>
                     </div>
@@ -159,7 +163,7 @@
             <!-- Row -->
             <div class="row wrap-service-24">
                 <!-- Column -->
-                <div class="col-lg-3 ">
+                <div class="col-md-4 ">
                     <div class="card rounded card-shadow border-0 mb-4">
                         <a href="<?=base_url('Login');?>" class="card-hover py-4 text-center d-block rounded">
                             <span class="bg-success-grediant"><i class="fas fa-calculator"></i></span>
@@ -169,7 +173,7 @@
                 </div>
                 <!-- Column -->
                 <!-- Column -->
-                <div class="col-lg-3 ">
+                <div class="col-md-4  ">
                     <div class="card card-shadow border-0 mb-4">
                         <a href="javascript:void(0)" class="card-hover py-4 text-center d-block rounded">
                             <span class="bg-success-grediant"><i class="fas fa-calendar-alt"></i></span>
@@ -179,7 +183,7 @@
                 </div>
                 <!-- Column -->
                 <!-- Column -->
-                <div class="col-lg-3 ">
+                <div class="col-md-4  ">
                     <div class="card card-shadow border-0 mb-4">
                         <a href="javascript:void(0)" class="card-hover py-4 text-center d-block rounded">
                             <span class="bg-success-grediant"><i class="far fa-calendar-alt"></i></span>

@@ -13,7 +13,10 @@
     @import url('https://fonts.googleapis.com/css2?family=Sarabun&display=swap');
 
 /* BASIC */
-
+*{
+  margin: 0;
+  padding: 0;
+}
 html {
   background-color: #28a745;
 }
@@ -152,7 +155,7 @@ input[type=text] {
 
 input[type=text]:focus {
   background-color: #fff;
-  border-bottom: 2px solid #5fbae9;
+  border-bottom: 2px solid #28A745;
 }
 
 input[type=text]:placeholder {
@@ -183,7 +186,7 @@ input[type=password] {
 
 input[type=password]:focus {
   background-color: #fff;
-  border-bottom: 2px solid #5fbae9;
+  border-bottom: 2px solid #28A745;
 }
 
 input[type=password]:placeholder {
@@ -282,13 +285,13 @@ input[type=password]:placeholder {
   bottom: -10px;
   width: 0;
   height: 2px;
-  background-color: #28a745;
+  background-color: #28A745;
   content: "";
   transition: width 0.2s;
 }
 
 .underlineHover:hover {
-  color: #0d0d0d;
+  color: #28A745;
 }
 
 .underlineHover:hover:after{
@@ -320,13 +323,13 @@ input[type=password]:placeholder {
 
     <!-- Icon -->
     <div class="fadeIn first">
-      <h1>Welcome Back งานวิชาการ</h1>
+      <img src="assets/images/login.svg" alt="" srcset="" style="width: 85%;margin-top: 10px;">
     </div>
 
     <!-- Login Form -->
     <form method="post" action="<?=base_url('control_login/validlogin');?>">
       <input type="text" id="username" class="fadeIn second" name="username" placeholder="เลขประจำตัวนักเรียน" required autofocus>
-      <input type="password" id="password" class="fadeIn third" name="password" placeholder="รหัสบัตรประชาชน 13 หลัก" required>
+      <input type="password" id="password" class="fadeIn third" name="password" placeholder="เลขบัตรประชาชน 13 หลัก" required>
       <button type="submit" class="fadeIn fourth" > Log In</button>
     </form>
 
