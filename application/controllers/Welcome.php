@@ -20,6 +20,12 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		
+        $this->load->view('user/PageWelcomeAcademic.php');
+	}
+
+	public function Login()
+	{
 		$this->load->view('login/loginMain.php');
 	}
 }

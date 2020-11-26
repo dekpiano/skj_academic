@@ -47,13 +47,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | controller and method URI segments.
 |
 | Examples:	my-controller/index	-> my_controller/index
-|		my-controller/my-method	-> my_controller/my_method
+|		my-controller/my-method	-> my_controller/my_method/control_login/Login_main
 */
-$route['default_controller'] = 'control_login/Login_main';
+$route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['Logout'] = "Control_login/logout";
+$route['Login'] = "Control_login/Login_main";
 
 $route['Home'] = "user/ConUser_Home/Home";
 $route['AcademicResult'] = "user/ConAcademicResult/score";

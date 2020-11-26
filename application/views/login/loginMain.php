@@ -15,7 +15,7 @@
 /* BASIC */
 
 html {
-  background-color: #56baed;
+  background-color: #28a745;
 }
 
 body {
@@ -94,8 +94,8 @@ h2.active {
 
 /* FORM TYPOGRAPHY*/
 
-input[type=button], input[type=submit], input[type=reset]  {
-  background-color: #56baed;
+input[type=button], input[type=submit], input[type=reset],button  {
+  background-color: #28a745;
   border: none;
   color: white;
   padding: 15px 80px;
@@ -282,7 +282,7 @@ input[type=password]:placeholder {
   bottom: -10px;
   width: 0;
   height: 2px;
-  background-color: #56baed;
+  background-color: #28a745;
   content: "";
   transition: width 0.2s;
 }
@@ -325,19 +325,24 @@ input[type=password]:placeholder {
 
     <!-- Login Form -->
     <form method="post" action="<?=base_url('control_login/validlogin');?>">
-      <input type="text" id="username" class="fadeIn second" name="username" placeholder="username">
-      <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
-      <input type="submit" class="fadeIn fourth" value="Log In">
+      <input type="text" id="username" class="fadeIn second" name="username" placeholder="เลขประจำตัวนักเรียน" required autofocus>
+      <input type="password" id="password" class="fadeIn third" name="password" placeholder="รหัสบัตรประชาชน 13 หลัก" required>
+      <button type="submit" class="fadeIn fourth" > Log In</button>
     </form>
 
     <!-- Remind Passowrd -->
     <div id="formFooter">
-      <a class="underlineHover" href="#">ลืมรหัสติดต่อเจ้าหน้าที่</a>
+      <a class="underlineHover" href="<?=base_url('./');?>">กลับหน้าหลัก</a>
     </div>
 
   </div>
 </div>
-
-  
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<?php if ($this->session->flashdata('msgerr')) :?>
+  <script>
+ swal("ผิดพลาด", "ข้อมูลไม่ถูกต้อง", "error");
+</script>
+<?php endif; ?>
 </body>
+
 </html>

@@ -10,14 +10,14 @@ class Model_login extends CI_Model
 	public function record_count($username,$password)
 	{
 		$this->db->where('StudentCode',$username);
-		$this->db->where('StudentDateBirth',$password);
+		$this->db->where('StudentIDNumber',$password);
 		return $this->db->count_all_results('tb_students');
 	}
 
 	public function fetch_user_login($username,$password)
 	{
 		$this->db->where('StudentCode',$username);
-		$this->db->where('StudentDateBirth',$password);
+		$this->db->where('StudentIDNumber',$password);
 		$query = $this->db->get('tb_students');
 		return $query->row();
 	}

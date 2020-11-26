@@ -261,14 +261,7 @@ ul {
             <div class="container text-center">
                 <h2 class="heading">วิชาการยินดีต้อนรับ</h2>
                 <div class="intro">Welcome to Academic System</div>
-                <form class="signup-form form-inline justify-content-center pt-3">
-                    <div class="form-group">
-                        <label class="sr-only" for="semail">Your email</label>
-                        <input type="email" id="semail" name="semail1" class="form-control mr-md-1 semail"
-                            placeholder="Enter email">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Subscribe</button>
-                </form>
+              
             </div>
             <!--//container-->
         </section>
@@ -282,7 +275,7 @@ ul {
 						<i class="fas fa-calculator"></i>
                             <h4> <a href="<?=base_url('AcademicResult');?>">ผลการเรียน</a> </h4>
                             <p>
-                                ดูคะแนนสอบทั้งหมด เป็นภาคเรียน หรือย้อนหลัง
+                                ดูคะแนนสอบทั้งหมด 
                             </p>
                         </div>
                     </div>
@@ -291,10 +284,10 @@ ul {
                     <!-- Single Item -->
                     <div class="col-md-4 col-sm-6 equal-height">
                         <div class="item">
-                            <i class="fas fa-dharmachakra"></i>
-                            <h4>Software Development</h4>
+                            <i class="fas fa-table"></i>
+                            <h4>ตารางเรียน</h4>
                             <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                               วิชาเรียนในแต่ละวัน
                             </p>
                         </div>
                     </div>
@@ -303,10 +296,10 @@ ul {
                     <!-- Single Item -->
                     <div class="col-md-4 col-sm-6 equal-height">
                         <div class="item">
-                            <i class="fas fa-tasks"></i>
-                            <h4>Porject Management</h4>
+                            <i class="fas fa-table"></i>
+                            <h4>ตารางสอบ</h4>
                             <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                ตารางสอบกลางภาคและปลายภาคเรียน
                             </p>
                         </div>
                     </div>
@@ -317,6 +310,6 @@ ul {
                 </div>
             </div>
         </section>
-
+       
     </div>
     <!--//main-wrapper-->

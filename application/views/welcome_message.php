@@ -1,89 +1,214 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
+    <meta charset="utf-8">
+    <title>Welcome to Academic | SKJ</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 
-	<style type="text/css">
+    <style type="text/css">
+    .container {
+        margin-top: 100px
+    }
 
-	::selection { background-color: #E13300; color: white; }
-	::-moz-selection { background-color: #E13300; color: white; }
+    .section-title {
+        margin-bottom: 38px
+    }
 
-	body {
-		background-color: #fff;
-		margin: 40px;
-		font: 13px/20px normal Helvetica, Arial, sans-serif;
-		color: #4F5155;
-	}
+    .shadow,
+    .subscription-wrapper {
+        box-shadow: 0px 15px 39px 0px rgba(8, 18, 109, 0.1) !important
+    }
 
-	a {
-		color: #003399;
-		background-color: transparent;
-		font-weight: normal;
-	}
+    .icon-primary {
+        color: #062caf
+    }
 
-	h1 {
-		color: #444;
-		background-color: transparent;
-		border-bottom: 1px solid #D0D0D0;
-		font-size: 19px;
-		font-weight: normal;
-		margin: 0 0 14px 0;
-		padding: 14px 15px 10px 15px;
-	}
+    .icon-bg-circle {
+        position: relative
+    }
 
-	code {
-		font-family: Consolas, Monaco, Courier New, Courier, monospace;
-		font-size: 12px;
-		background-color: #f9f9f9;
-		border: 1px solid #D0D0D0;
-		color: #002166;
-		display: block;
-		margin: 14px 0 14px 0;
-		padding: 12px 10px 12px 10px;
-	}
+    .icon-lg {
+        font-size: 50px
+    }
 
-	#body {
-		margin: 0 15px 0 15px;
-	}
+    .icon-bg-circle::before {
+        z-index: 1;
+        position: relative
+    }
 
-	p.footer {
-		text-align: right;
-		font-size: 11px;
-		border-top: 1px solid #D0D0D0;
-		line-height: 32px;
-		padding: 0 10px 0 10px;
-		margin: 20px 0 0 0;
-	}
+    .icon-bg-primary::after {
+        background: #062caf !important
+    }
 
-	#container {
-		margin: 10px;
-		border: 1px solid #D0D0D0;
-		box-shadow: 0 0 8px #D0D0D0;
-	}
-	</style>
+    .icon-bg-circle::after {
+        content: '';
+        position: absolute;
+        width: 68px;
+        height: 68px;
+        top: -35px;
+        left: 15px;
+        border-radius: 50%;
+        background: inherit;
+        opacity: .1
+    }
+
+    p,
+    .paragraph {
+        font-weight: 400;
+        color: #8b8e93;
+        font-size: 15px;
+        line-height: 1.6;
+        font-family: "Open Sans", sans-serif
+    }
+
+    .icon-bg-yellow::after {
+        background: #f6a622 !important
+    }
+
+    .icon-bg-purple::after {
+        background: #7952f5
+    }
+
+    .icon-yellow {
+        color: #f6a622
+    }
+
+    .icon-purple {
+        color: #7952f5
+    }
+
+    .icon-cyan {
+        color: #02d0a1
+    }
+
+    .icon-bg-cyan::after {
+        background: #02d0a1
+    }
+
+    .icon-bg-red::after {
+        background: #ff4949
+    }
+
+    .icon-red {
+        color: #ff4949
+    }
+
+    .icon-bg-green::after {
+        background: #66cc33
+    }
+
+    .icon-green {
+        color: #66cc33
+    }
+
+    .icon-bg-orange::after {
+        background: #ff7c17
+    }
+
+    .icon-orange {
+        color: #ff7c17
+    }
+
+    .icon-bg-blue::after {
+        background: #3682ff
+    }
+
+    .icon-blue {
+        color: #3682ff
+    }
+    </style>
 </head>
+
 <body>
 
-<div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
-
-	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
-
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/Welcome.php</code>
-
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
-	</div>
-
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
-</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <p class="subtitle">Services</p>
+                <h2 class="section-title">งานวิชาการ</h2>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4">
+                <div class="card border-0 shadow rounded-xs pt-5">
+                    <div class="card-body"> <i
+                            class="fa fa-object-ungroup icon-lg icon-primary icon-bg-primary icon-bg-circle mb-3"></i>
+                        <h4 class="mt-4 mb-3">Networking</h4>
+                        <p>For what reason would it be advisable for me to think about business content?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4">
+                <div class="card border-0 shadow rounded-xs pt-5">
+                    <div class="card-body"> <i
+                            class="fa fa-users icon-lg icon-yellow icon-bg-yellow icon-bg-circle mb-3"></i>
+                        <h4 class="mt-4 mb-3">Social Activity</h4>
+                        <p>For what reason would it be advisable for me to think about business content?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4">
+                <div class="card border-0 shadow rounded-xs pt-5">
+                    <div class="card-body"> <i
+                            class="fa fa-desktop icon-lg icon-purple icon-bg-purple icon-bg-circle mb-3"></i>
+                        <h4 class="mt-4 mb-3">Web Design</h4>
+                        <p>For what reason would it be advisable for me to think about business content?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4">
+                <div class="card border-0 shadow rounded-xs pt-5">
+                    <div class="card-body"> <i
+                            class="fa fa-cloud icon-lg icon-cyan icon-bg-cyan icon-bg-circle mb-3"></i>
+                        <h4 class="mt-4 mb-3">Cloud Service</h4>
+                        <p>For what reason would it be advisable for me to think about business content?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4">
+                <div class="card border-0 shadow rounded-xs pt-5">
+                    <div class="card-body"> <i
+                            class="fa fa-comments icon-lg icon-red icon-bg-red icon-bg-circle mb-3"></i>
+                        <h4 class="mt-4 mb-3">Consulting</h4>
+                        <p>For what reason would it be advisable for me to think about business content?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4">
+                <div class="card border-0 shadow rounded-xs pt-5">
+                    <div class="card-body"> <i
+                            class="fa fa-search-plus icon-lg icon-green icon-bg-green icon-bg-circle mb-3"></i>
+                        <h4 class="mt-4 mb-3">SEO Optimization</h4>
+                        <p>For what reason would it be advisable for me to think about business content?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4">
+                <div class="card border-0 shadow rounded-xs pt-5">
+                    <div class="card-body"> <i
+                            class="fa fa-user icon-lg icon-orange icon-bg-orange icon-bg-circle mb-3"></i>
+                        <h4 class="mt-4 mb-3">Usability Testing</h4>
+                        <p>For what reason would it be advisable for me to think about business content?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4">
+                <div class="card border-0 shadow rounded-xs pt-5">
+                    <div class="card-body"> <i
+                            class="fa fa-envelope icon-lg icon-blue icon-bg-blue icon-bg-circle mb-3"></i>
+                        <h4 class="mt-4 mb-3">UX Prototyping</h4>
+                        <p>For what reason would it be advisable for me to think about business content?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+
 </html>
