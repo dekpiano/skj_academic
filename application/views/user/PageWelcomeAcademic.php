@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-100">
 
 <head>
     <!-- Required meta tags -->
@@ -145,23 +145,24 @@
     </style>
 </head>
 
-<body>
+<body class="d-flex flex-column h-100">
     <div class="service-24">
-        <div class="container">
-         
-            <div class="row vh-100">
+        <div class="container mt-5">
+
+            <div class="row">
                 <div class="col-md-6 align-self-center">
-                <img src="<?=base_url('assets/images/img-home.png');?>" alt="" srcset="" class="img-fluid">
+                    <img src="<?=base_url('assets/images/img-home.png');?>" alt="" srcset="" class="img-fluid">
                 </div>
                 <div class="col-md-6 align-self-center">
-                    <div class="site-heading text-center">                    
+                    <div class="site-heading text-center">
                         <h2>ระบบงาน <span>วิชาการ</span></h2>
                         <h4>โรงเรียนสวนกุหลาบวิทยาลัย (จิรประวัติ) นครสวรรค์</h4>
                     </div>
                 </div>
             </div>
-            <!-- Row -->
+
             <div class="row wrap-service-24">
+
                 <!-- Column -->
                 <div class="col-md-4 ">
                     <div class="card rounded card-shadow border-0 mb-4">
@@ -198,6 +199,12 @@
         </div>
     </div>
 
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <span class="text-muted">Powered by Dekpiano © โรงเรียนสวนกุหลาบวิทยาลัย (จิรประวัติ) นครสวรรค์ 2020 | <a
+                    href="#" data-toggle="modal" data-target="#exampleModal">สำหรับเจ้าหน้าที่</a> </span>
+        </div>
+    </footer>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
@@ -211,3 +218,29 @@
 </body>
 
 </html>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <form class="form-signin" method="post" action="<?=base_url('Control_login/LoginAdmin');?>">                  
+                    <div class="form-label-group">
+                        <input type="text" id="username" name="username" class="form-control" placeholder="Username" required=""
+                            autofocus="">
+                        <label for="username"></label>
+                    </div>
+
+                    <div class="form-label-group">
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Password"
+                            required="">
+                        <label for="password"></label>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                   
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

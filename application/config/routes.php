@@ -53,8 +53,17 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+// admin
+$route['LogoutAdmin'] = "Control_login/";
+$route['AdminHome'] = "admin/ConAdminHome/AdminHome";
+
+$route['Admin/ClassSchedule'] = "admin/ConAdminClassSchedule/AdminClassScheduleMain";
+$route['Admin/ClassSchedule/add'] = "admin/ConAdminClassSchedule/add";
+
+// Login
 $route['Logout'] = "Control_login/logout";
 $route['Login'] = "Control_login/Login_main";
 
+// User
 $route['Home'] = "user/ConUser_Home/Home";
 $route['AcademicResult'] = "user/ConAcademicResult/score";

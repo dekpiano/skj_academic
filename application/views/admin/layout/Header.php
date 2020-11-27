@@ -19,8 +19,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="stylesheet" href="https://demo.voidcoders.com/htmldemo/fitgear/main-files/assets/css/animate.css">
     <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="<?=base_url();?>assets/css/theme-1.css">
+    <link id="theme-style" rel="stylesheet" href="<?=base_url();?>assets/css/theme-2.css">
 
+    <style>
+        .btn{
+            height: 2.2rem;
+        }
+    </style>
 </head>
 
 <body style="font-family: 'Sarabun', sans-serif;" class="theme-bg-light ">
@@ -37,7 +42,7 @@
 
             <div id="navigation" class="collapse navbar-collapse flex-column">
                 <div class="profile-section pt-3 pt-lg-0">
-                    <img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/profile.png" alt="image">
+                    <img class="profile-image mb-3 rounded-circle mx-auto" src="https://picsum.photos/id/<?=rand(200,300);?>/200/200" alt="image">
 
                     <div class="bio mb-3"><?=$this->session->userdata('fullname');?><br>
                         <?=$this->session->userdata('class');?>
@@ -52,12 +57,9 @@
                     <li class="nav-item ">
                             <a class="nav-link" href="<?=base_url('Home');?>"><i
                                     class="fas fa-home fa-fw mr-2"></i>หน้าแรก </a>
-                        </li>
+                        </li>                        
                         <li class="nav-item ">
-                            <a class="nav-link" href="<?=base_url('AcademicResult');?>"><i class="fas fa-calculator fa-fw mr-2"></i>ผลการเรียน </a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="<?=base_url('AcademicResult');?>"><i
+                            <a class="nav-link" href="<?=base_url('Admin/ClassSchedule');?>"><i
                                     class="fas fa-table fa-fw mr-2"></i>ตารางเรียน </a>
                         </li>
                         <li class="nav-item ">

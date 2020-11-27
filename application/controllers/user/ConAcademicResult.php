@@ -6,8 +6,9 @@ var  $title = "ผลการเรียน";
 	public function __construct() {
 		parent::__construct();
 		
-		if ($this->session->userdata('fullname') == '') {
-			redirect('login','refresh');
+		if ($this->session->userdata('fullname') == '' || $this->session->userdata('status') == "admin") {
+            
+			redirect('Login','refresh');
 		}
 
     }

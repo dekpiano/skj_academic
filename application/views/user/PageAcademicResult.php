@@ -26,7 +26,7 @@
                             <div class="table-responsive">
                                 <table class="table table-hover table-bordered">
                                     <thead class="bg-light">
-                                        <tr>
+                                        <tr class="text-center">
                                             <th scope="col">รหัสวิชา</th>
                                             <th scope="col">ชื่อวิชา</th>
                                             <th scope="col">หน่วยกิต</th>

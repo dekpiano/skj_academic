@@ -25,7 +25,7 @@ class Control_login extends CI_Controller {
 	public function Login_main()
 	{
 		if(!empty(get_cookie('username_cookie')) && !empty(get_cookie('password_cookie')) ){
-					 redirect('admin');				
+					 redirect('Logout');				
 		}else{
 			$data = $this->dataAll();
 					$this->load->view('login/loginMain.php');
@@ -46,12 +46,12 @@ class Control_login extends CI_Controller {
 				if($this->Model_login->record_count($username, $password) == 1)
 				{
 					$result = $this->Model_login->fetch_user_login($username, $password);
-					$this->session->set_userdata(array('login_id' => $result->StudentCode,'fullname'=> $result->StudentPrefix.$result->StudentFirstName.' '.$result->StudentLastName,'status'=> 'user','class' => $result->StudentClass));
+					$this->session->set_userdata(array('login_id' => $result->StudentID,'StudentCode' => $result->StudentCode,'fullname'=> $result->StudentPrefix.$result->StudentFirstName.' '.$result->StudentLastName,'status'=> 'user','class' => $result->StudentClass));
 
 					set_cookie('username_cookie',$username,'3600'); 
 					set_cookie('password_cookie',$password,'3600');
 
-					$this->session->set_userdata(array('login_id' => $result->StudentCode,'fullname'=> $result->StudentPrefix.$result->StudentFirstName.' '.$result->StudentLastName,'status'=> 'user'));
+					$this->session->set_userdata(array('login_id' => $result->StudentID,'StudentCode' => $result->StudentCode,'fullname'=> $result->StudentPrefix.$result->StudentFirstName.' '.$result->StudentLastName,'status'=> 'user'));
 
 				 redirect('Home');
 					//echo "Yes";
@@ -65,9 +65,42 @@ class Control_login extends CI_Controller {
 					redirect('Login', 'refresh');
 				}
 			}
-		
-		
 	}
+
+	public function LoginAdmin()
+	{	
+		
+	
+			$username = $this->input->post('username');
+			$password = md5(md5($this->input->post('password')));
+			
+			
+			if($this->input->server('REQUEST_METHOD') == TRUE){
+				if($this->Model_login->record_count_admin($username, $password) == 1)
+				{
+
+					$result = $this->Model_login->fetch_admin_login($username, $password);
+					$this->session->set_userdata(array('login_id' => $result->pers_id,'fullname'=> $result->pers_prefix.$result->pers_firstname.' '.$result->pers_firstname,'status'=> 'admin','class' => $result->StudentClass));
+
+					set_cookie('username_cookie',$username,'3600'); 
+					set_cookie('password_cookie',$password,'3600');
+
+					$this->session->set_userdata(array('login_id' => $result->pers_id,'fullname'=> $result->pers_prefix.$result->pers_firstname.' '.$result->pers_firstname,'status'=> 'admin'));
+
+				 redirect('AdminHome');
+					//echo "Yes";
+
+				}
+				else
+				{
+					
+					$this->session->set_flashdata(array('msgerr'=> 'NO'));
+					// redirect('login');
+
+					redirect('Home', 'refresh');
+				}
+			}
+	}		
 
 
 
