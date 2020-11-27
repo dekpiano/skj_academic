@@ -20,18 +20,26 @@
     <link rel="stylesheet" href="https://demo.voidcoders.com/htmldemo/fitgear/main-files/assets/css/animate.css">
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="<?=base_url();?>assets/css/theme-2.css">
-
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css"
+        rel="stylesheet">
     <style>
-        .btn{
-            height: 2.2rem;
-        }
+    .btn {
+        height: 2.2rem;
+    }
+
+    .btn-group-xs>.btn,
+    .btn-xs {
+        line-height: 1.5;
+    }
+    .toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20rem; }
+  .toggle.ios .toggle-handle { border-radius: 20rem; }
     </style>
 </head>
 
 <body style="font-family: 'Sarabun', sans-serif;" class="theme-bg-light ">
 
     <header class="header text-center">
-        <h1 class="blog-name pt-lg-4 mb-0"><a href="<?=base_url('Home');?>">ระบบงานวิชาการ</a></h1>
+        <h1 class="blog-name pt-lg-4 mb-0"><a href="<?=base_url('Home');?>">ระบบงานวิชาการ (Admin)</a></h1>
 
         <nav class="navbar navbar-expand-lg navbar-dark">
 
@@ -42,7 +50,8 @@
 
             <div id="navigation" class="collapse navbar-collapse flex-column">
                 <div class="profile-section pt-3 pt-lg-0">
-                    <img class="profile-image mb-3 rounded-circle mx-auto" src="https://picsum.photos/id/<?=rand(200,300);?>/200/200" alt="image">
+                    <img class="profile-image mb-3 rounded-circle mx-auto"
+                        src="https://picsum.photos/id/<?=rand(200,300);?>/200/200" alt="image">
 
                     <div class="bio mb-3"><?=$this->session->userdata('fullname');?><br>
                         <?=$this->session->userdata('class');?>
@@ -54,10 +63,15 @@
                     <!--//profile-section-->
 
                     <ul class="navbar-nav flex-column text-left">
-                    <li class="nav-item ">
-                            <a class="nav-link" href="<?=base_url('Home');?>"><i
+                        <li class="nav-item ">
+                            <a class="nav-link" href="<?=base_url('AdminHome');?>"><i
                                     class="fas fa-home fa-fw mr-2"></i>หน้าแรก </a>
-                        </li>                        
+                        </li>
+                        <hr>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="<?=base_url('Admin/AcademicResult');?>"><i
+                                    class="fas fa-table fa-fw mr-2"></i>ผลการเรียน </a>
+                        </li>
                         <li class="nav-item ">
                             <a class="nav-link" href="<?=base_url('Admin/ClassSchedule');?>"><i
                                     class="fas fa-table fa-fw mr-2"></i>ตารางเรียน </a>
@@ -83,14 +97,16 @@
     </header>
 
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">    
-      
-      <img src="https://chart.googleapis.com/chart?chs=500x300&cht=qr&chl=<?=$this->session->userdata('StudentCode');?>&choe=UTF-8" title="Link to my Website" />
-     
-   
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <img src="https://chart.googleapis.com/chart?chs=500x300&cht=qr&chl=<?=$this->session->userdata('StudentCode');?>&choe=UTF-8"
+                    title="Link to my Website" />
+
+
+            </div>
+        </div>
     </div>
-  </div>
-</div>

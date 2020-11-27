@@ -14,8 +14,9 @@ var  $title = "แผงควบคุม";
 
 
     public function Home(){      
-
-        $this->load->view('user/layout/Header.php');
+        
+        $data['CheckOnOff'] = $this->db->select('*')->from('tb_register_onoff')->get()->result();
+        $this->load->view('user/layout/Header.php',$data);
         $this->load->view('user/PageHome.php');
         $this->load->view('user/layout/Footer.php');
 

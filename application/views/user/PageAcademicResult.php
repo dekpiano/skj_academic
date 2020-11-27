@@ -14,6 +14,8 @@
     </section>
     <section class=" theme-bg-light ">
         <div class="container-fluid ">
+            <?php if($CheckOnOff[0]->onoff_status == "true") : ?>
+
             <div class="row">
                 <?php
                 foreach ($scoreYear as $key_year => $v_scoreYear) : 
@@ -21,6 +23,7 @@
                 <div class="col-md-6">
                     <div class="card mb-5">
                         <div class="card-header text-center text-white" style="background-color: #5FCB71;">ภาคเรียนที่
+                            <?php print_r($CheckOnOff[0]->onoff_status);?>
                             <?=$v_scoreYear->RegisterYear?> </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -77,7 +80,8 @@
                                             <th colspan=2>รวม</th>
                                             <th><?=$SumUnit;?></th>
                                             <th><?=$scoreLevel;?></th>
-                                            <th><?=number_format($SumGrade/$SumUnit, 2);  $SumUnit = 0; $SumGrade = 0;$scoreLevel=0;?></th>
+                                            <th><?=number_format($SumGrade/$SumUnit, 2);  $SumUnit = 0; $SumGrade = 0;$scoreLevel=0;?>
+                                            </th>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -88,6 +92,17 @@
 
                 <?php  endforeach;?>
             </div>
+            <?php else: ?>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="text-center">
+                        <img src="<?=base_url('assets/images/academicResult/img-update.svg')?>" alt="" srcset="" class="img-fluid">
+                        <h1>อยู่ระหว่างการอัพเดต...</h1>
+                    </div>
+                </div>
+            </div>
+
+            <?php endif; ?>
         </div>
 
 

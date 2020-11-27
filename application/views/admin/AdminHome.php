@@ -1,6 +1,4 @@
 <style>
-
-
 a,
 a:hover,
 a:focus,
@@ -255,23 +253,23 @@ ul {
     top: -10px;
     width: 120px;
 }
-    </style>
-    <div class="main-wrapper">
-        <section class="cta-section theme-bg-light py-5">
-            <div class="container text-center">
-                
-                <h2 class="heading">วิชาการยินดีต้อนรับ</h2>
-                <div class="intro">Welcome to Academic System</div>
-              
+</style>
+<div class="main-wrapper ">
+    <section class="theme-bg-light ">
+        <div class="container text-center  ">
+            <div class="row justify-content-center vh-100">
+                <div class="col-md-6 align-self-center">
+                    <img src="<?=base_url('assets/images/welcome.svg');?>" alt="" class="img-fluid">
+                    <h2 class="heading">วิชาการยินดีต้อนรับ</h2>
+                    <div class="intro">Welcome to Academic System</div>
+                </div>
             </div>
-            <!--//container-->
-        </section>
-        <section class="we-offer-area text-center ">
-            <div class="container-fluid">
-         
-             
-            </div>
-        </section>
-       
-    </div>
-    <!--//main-wrapper-->
+
+
+        </div>
+        <!--//container-->
+    </section>
+  
+
+</div>
+<!--//main-wrapper-->

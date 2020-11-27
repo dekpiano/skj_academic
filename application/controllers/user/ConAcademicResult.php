@@ -41,6 +41,7 @@ var  $title = "ผลการเรียน";
                                     ->order_by('tb_register.RegisterClass ASC','tb_register.RegisterYear ASC','tb_subjects.SubjectCode ASC')
                                     ->get()->result();
         //print_r($data['scoreStudent']); exit();
+        $data['CheckOnOff'] = $this->db->select('*')->from('tb_register_onoff')->get()->result();
         $this->load->view('user/layout/Header.php',$data);
         $this->load->view('user/PageAcademicResult.php');
         $this->load->view('user/layout/Footer.php');

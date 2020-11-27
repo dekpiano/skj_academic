@@ -57,6 +57,9 @@ $route['translate_uri_dashes'] = FALSE;
 $route['LogoutAdmin'] = "Control_login/";
 $route['AdminHome'] = "admin/ConAdminHome/AdminHome";
 
+$route['Admin/AcademicResult'] = "admin/ConAdminAcademinResult/AdminAcademinResultMain";
+
+
 $route['Admin/ClassSchedule'] = "admin/ConAdminClassSchedule/AdminClassScheduleMain";
 $route['Admin/ClassSchedule/add'] = "admin/ConAdminClassSchedule/add";
 
