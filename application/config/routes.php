@@ -59,9 +59,10 @@ $route['AdminHome'] = "admin/ConAdminHome/AdminHome";
 
 $route['Admin/AcademicResult'] = "admin/ConAdminAcademinResult/AdminAcademinResultMain";
 
-
 $route['Admin/ClassSchedule'] = "admin/ConAdminClassSchedule/AdminClassScheduleMain";
 $route['Admin/ClassSchedule/add'] = "admin/ConAdminClassSchedule/add";
+
+$route['Admin/ClassRoom'] = "admin/ConAdminClassRoom/AdminClassMain";
 
 // Login
 $route['Logout'] = "Control_login/logout";

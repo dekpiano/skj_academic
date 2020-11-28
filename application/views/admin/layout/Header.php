@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="stylesheet" href="https://demo.voidcoders.com/htmldemo/fitgear/main-files/assets/css/animate.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="<?=base_url();?>assets/css/theme-2.css">
     <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css"
@@ -77,8 +78,12 @@
                                     class="fas fa-table fa-fw mr-2"></i>ตารางเรียน </a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="<?=base_url('AcademicResult');?>"><i
+                            <a class="nav-link" href="<?=base_url('');?>"><i
                                     class="fas fa-table fa-fw mr-2"></i>ตารางสอบ </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="<?=base_url('Admin/ClassRoom');?>"><i
+                                    class="fas fa-table fa-fw mr-2"></i>ห้องเรียน / ที่ปรึกษา </a>
                         </li>
                         <hr>
                         <li class="nav-item ">
