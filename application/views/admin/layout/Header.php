@@ -34,6 +34,28 @@
     }
     .toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20rem; }
   .toggle.ios .toggle-handle { border-radius: 20rem; }
+  /* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+header{
+    overflow: auto;
+}
     </style>
 </head>
 
@@ -90,6 +112,7 @@
                             <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModalCenter"><i
                                     class="fas fa-qrcode fa-fw mr-2"></i>QR Code </a>
                         </li>
+                      
 
                     </ul>
 

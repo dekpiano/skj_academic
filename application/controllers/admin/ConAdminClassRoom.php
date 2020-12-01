@@ -19,10 +19,10 @@ class ConAdminClassRoom extends CI_Controller {
         
 		$data['title'] = "ห้องเรียน/ที่ปรึกษา";		
 		$this->db->select('*');
-		$this->db->from('tb_regclass');
+        $this->db->from('tb_regclass');
+        $this->db->join($DBpersonnel->database.'.tb_personnel','tb_personnel.pers_id = tb_regclass.class_teacher');
 		$this->db->order_by('Reg_Class','ASC');
         $data['classRoom'] = $this->db->get()->result();
-
         
         $data['NameTeacher'] = $DBpersonnel->select('pers_id,pers_prefix,pers_firstname,pers_lastname,pers_position')
         ->from('tb_personnel')

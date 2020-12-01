@@ -1,4 +1,4 @@
-<div class="main-wrapper">
+<div class="main-wrapper theme-bg-light ">
     <section class="cta-section theme-bg-light py-5">
         <div class="container text-center">
 
@@ -20,11 +20,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                    <?php foreach ($classRoom as $key => $v_classRoom) : ?>
+                    <?php $tea = []; foreach ($classRoom as $key => $v_classRoom) : 
+                    $tea[] = $v_classRoom->class_teacher;
+                        ?>
                         <tr>
                             <td><?=$v_classRoom->Reg_Year?></td>
                             <td><?=$v_classRoom->Reg_Class?></td>
-                            <td><?=$v_classRoom->class_teacher?></td>
+                            <td><?=$v_classRoom->pers_prefix.$v_classRoom->pers_firstname.' '.$v_classRoom->pers_lastname?></td>
                         </tr>
                     <?php endforeach; ?>  
                     </tbody>
@@ -69,9 +71,13 @@
                        
                                 <option value=''>เลือกครูที่ปรึกษา</option>
                                 <?php foreach ($NameTeacher as $key => $v_NameTeacher) : ?>
+                                    <?php if(in_array($v_NameTeacher->pers_id,$tea)): ?>
+                                      
+                                    <?php else: ?>
                                 <option value="<?=$v_NameTeacher->pers_id;?>">                             
                                     <?=$v_NameTeacher->pers_prefix.$v_NameTeacher->pers_firstname.' '.$v_NameTeacher->pers_lastname?>
                                 </option>
+                                <?php endif; ?>
                                 <?php endforeach; ?>
                         </select>
                     </div>
