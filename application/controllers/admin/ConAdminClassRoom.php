@@ -5,7 +5,7 @@ class ConAdminClassRoom extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
-		
+		$this->load->model('admin/ModAdminClassRoom');
 		if ($this->session->userdata('fullname') == '' && $this->session->userdata('status') == "user") {		
 			redirect('Login','refresh');
 		}
@@ -14,11 +14,23 @@ class ConAdminClassRoom extends CI_Controller {
 
     public function AdminClassMain(){   
 
+        $DBpersonnel = $this->load->database('personnel', TRUE);
+        
+        
 		$data['title'] = "ห้องเรียน/ที่ปรึกษา";		
 		$this->db->select('*');
-		$this->db->from('tb_class_schedule');
-		$this->db->order_by('schestu_id','DESC');
-		$data['class_schedule'] = $this->db->get()->result();
+		$this->db->from('tb_regclass');
+		$this->db->order_by('Reg_Class','ASC');
+        $data['classRoom'] = $this->db->get()->result();
+
+        
+        $data['NameTeacher'] = $DBpersonnel->select('pers_id,pers_prefix,pers_firstname,pers_lastname,pers_position')
+        ->from('tb_personnel')
+        ->where('pers_position !=','posi_001')
+        ->where('pers_position !=','posi_002')
+        ->where('pers_position !=','posi_007')
+        ->order_by('pers_learning')
+        ->get()->result();
 
         $this->load->view('admin/layout/Header.php',$data);
         $this->load->view('admin/AdminClassRoom/AdminClassRoomMain.php');
@@ -31,7 +43,10 @@ class ConAdminClassRoom extends CI_Controller {
     }
     
     public function AddClassRoom(){   
-        print_r($this->input->post());
+        $dataClassRoom = array('Reg_Year'=>$this->input->post('year'),
+                                'Reg_Class'=>$this->input->post('classroom'),
+                                'class_teacher'=>$this->input->post('teacher'));
+        print_r($this->ModAdminClassRoom->ClassRoom_Add($dataClassRoom));
     }
 
 }

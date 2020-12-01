@@ -11,7 +11,7 @@
             <div class="card-body">
                 <button class="btn btn-primary btn-sm float-right mb-3" id="ModalAddClassRoom"> <i class="far fa-plus-square"></i> เพิ่ม<?=$title;?></button>
 
-                <table class="table table-bordered" id="example" >
+                <table class="table table-bordered" id="tb-classroom" >
                     <thead>
                         <tr>
                             <th>ปีการศึกษา</th>
@@ -20,21 +20,13 @@
                         </tr>
                     </thead>
                     <tbody>
+                    <?php foreach ($classRoom as $key => $v_classRoom) : ?>
                         <tr>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>john@example.com</td>
+                            <td><?=$v_classRoom->Reg_Year?></td>
+                            <td><?=$v_classRoom->Reg_Class?></td>
+                            <td><?=$v_classRoom->class_teacher?></td>
                         </tr>
-                        <tr>
-                            <td>Mary</td>
-                            <td>Moe</td>
-                            <td>mary@example.com</td>
-                        </tr>
-                        <tr>
-                            <td>July</td>
-                            <td>Dooley</td>
-                            <td>july@example.com</td>
-                        </tr>
+                    <?php endforeach; ?>  
                     </tbody>
                 </table>
 
@@ -60,21 +52,28 @@
             <div class="modal-body">
                 <form id="AddClassRoom" action="#">
                     <div class="form-group">
-                        <label for="email">ปีการศึกษา</label>
+                        <label for="email">ปีการศึกษา <?php $d= (date('Y')+543)-1;?></label>
                         <select name="year" id="year" class="custom-select">
-                            <option selected>Custom Select Menu</option>
-                            <option value="volvo">Volvo</option>
-                            <option value="fiat">Fiat</option>
-                            <option value="audi">Audi</option>
+                                <?php for($i=$d; $i<=$d+2; $i++) : ?>
+                                <option <?=$i==date('Y')+543 ? 'selected' : ''?> ><?=$i;?></option>
+                                <?php endfor; ?>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="classroom">ห้องเรียน</label>
-                        <input type="text" class="form-control" placeholder="ex ม.2/5" name="classroom" id="classroom">
+                        <input type="text" class="form-control" placeholder="ตัวอย่าง เช่น ม.2/5" name="classroom" id="classroom" required>
                     </div>
                     <div class="form-group">
                         <label for="teacher">ครูที่ปรึกษา:</label>
-                        <input type="text" class="form-control" placeholder="ชื่อครูที่ปรึกษา" name="teacher" id="teacher">
+                        <select name="teacher" id="teacher" class="custom-select" required>
+                       
+                                <option value=''>เลือกครูที่ปรึกษา</option>
+                                <?php foreach ($NameTeacher as $key => $v_NameTeacher) : ?>
+                                <option value="<?=$v_NameTeacher->pers_id;?>">                             
+                                    <?=$v_NameTeacher->pers_prefix.$v_NameTeacher->pers_firstname.' '.$v_NameTeacher->pers_lastname?>
+                                </option>
+                                <?php endforeach; ?>
+                        </select>
                     </div>
                
             </div>

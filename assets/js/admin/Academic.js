@@ -1,5 +1,12 @@
 $(document).ready(function() {
-    $('#example').DataTable();
+    var ta = $('#tb-classroom').DataTable({
+        "order": [
+            [0, "desc"],
+            [1, "asc"]
+        ],
+
+    });
+
     $('#ModalAddClassRoom').on('click', function() {
         $('#myModal').modal('show');
     });
@@ -18,7 +25,8 @@ $(document).ready(function() {
                 //console.log("คือไรว่ะ");
             },
             success: function(result) {
-                console.log(result);
+                $('#myModal').modal('hide');
+                location.reload();
             }
         });
 

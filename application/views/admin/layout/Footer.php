@@ -7,7 +7,7 @@
 <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
 <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
 <script src="<?=base_url();?>assets/js/demo/style-switcher.js"></script>
-<script src="<?=base_url();?>assets/js/admin/Academic.js?v=1000"></script>
+<script src="<?=base_url();?>assets/js/admin/Academic.js?v=1002"></script>
 
 <script>
 $(function() {
