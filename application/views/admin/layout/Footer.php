@@ -6,9 +6,10 @@
 <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
 <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="<?=base_url();?>assets/js/demo/style-switcher.js"></script>
 <script src="<?=base_url();?>assets/js/admin/Academic.js?v=1002"></script>
-
+<?php $this->load->view('admin/layout/Alert.php'); ?>
 <script>
 $(function() {
     $('#checkOnOff').change(function() {

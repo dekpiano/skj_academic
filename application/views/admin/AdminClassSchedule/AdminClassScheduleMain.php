@@ -24,12 +24,11 @@
                   </thead>    
                   <?php foreach ($class_schedule as $key => $v_class_schedule) : ?>             
                     <tr>                     
-                      <td>ม.<?=$v_class_schedule->schestu_classname;?></td>
+                      <td><?=$v_class_schedule->schestu_classname;?></td>
                       <td><a href="<?=base_url('uploads/academic/class_schedule/'.$v_class_schedule->schestu_filename);?>" target="_blank" rel="noopener noreferrer">ดูไฟล์ <?=$v_class_schedule->schestu_classname;?></a></td>
                       <td><?=$v_class_schedule->schestu_datetime;?></td>
-                      <td>
-                        <a  href="<?=base_url('admin/academic/class_schedule/control_admin_class_schedule/edit_class_schedule/').$v_class_schedule->schestu_id.'/'.$v_class_schedule->schestu_filename;?>" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> แก้ไข</a>
-                        <a  href="<?=base_url('admin/academic/class_schedule/control_admin_class_schedule/delete_class_schedule/').$v_class_schedule->schestu_id.'/'.$v_class_schedule->schestu_filename;?>" class="btn btn-danger btn-sm" onClick="return confirm('ต้องการลบข้อมูลหรือไม่?')"><i class="fas fa-trash-alt"></i> ลบ</a>
+                      <td>                     
+                        <a  href="<?=base_url('admin/ConAdminClassSchedule/delete_class_schedule/').$v_class_schedule->schestu_id.'/'.$v_class_schedule->schestu_filename;?>" class="btn btn-danger btn-sm" onClick="return confirm('ต้องการลบข้อมูลหรือไม่?')"><i class="fas fa-trash-alt"></i> ลบ</a>
                       </td>
                     </tr>
                   <?php endforeach; ?>                   

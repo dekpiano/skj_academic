@@ -56,6 +56,11 @@
 header{
     overflow: auto;
 }
+.form-control{
+    padding-top: 0rem; 
+    padding-bottom: 0rem;
+}
+    
     </style>
 </head>
 

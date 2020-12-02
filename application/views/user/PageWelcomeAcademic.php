@@ -191,10 +191,7 @@
                             <h6 class="ser-title">ตารางสอบ</h6>
                         </a>
                     </div>
-                </div>
-                <!-- Column -->
-
-
+                </div>     
             </div>
         </div>
     </div>

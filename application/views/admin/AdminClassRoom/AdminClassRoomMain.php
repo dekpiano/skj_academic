@@ -63,7 +63,7 @@
                     </div>
                     <div class="form-group">
                         <label for="classroom">ห้องเรียน</label>
-                        <input type="text" class="form-control" placeholder="ตัวอย่าง เช่น ม.2/5" name="classroom" id="classroom" required>
+                        <input type="text" class="form-control" placeholder="ตัวอย่าง เช่น 2/5, 4/1" name="classroom" id="classroom" required>
                     </div>
                     <div class="form-group">
                         <label for="teacher">ครูที่ปรึกษา:</label>

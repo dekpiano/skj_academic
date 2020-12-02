@@ -16,9 +16,8 @@
                 <div class="card shadow mb-4 ">
 
                     <div class="card-body">
-                        <form
-                            action="<?=base_url('admin/academic/class_schedule/control_admin_class_schedule/').$action;?>"
-                            method="post" enctype="multipart/form-data">
+                        <form action="<?=base_url('admin/ConAdminClassSchedule/').$action;?>" method="post"
+                            enctype="multipart/form-data">
                             <div class="form-group row">
                                 <label for="schestu_id" class="col-sm-2 col-form-label">รหัส<?=$title;?></label>
                                 <div class="col-sm-10">
@@ -29,14 +28,15 @@
                             </div>
                             <div class="form-group row">
                                 <label for="schestu_classname" class="col-sm-2 col-form-label">ชั้น ม.</label>
-                                <div class="col-sm-2">
-                                    <?php $classroom = array("1","2","3","4","5","6"); ?>
+                                <div class="col-sm-10">
                                     <select name="schestu_classname" id="schestu_classname" class="form-control">
-                                        <?php foreach ($classroom as $key => $value): ?>
-                                        <option <?=@$class_schedule[0]->schestu_classname == $value ? 'selected' : '';?>
-                                            value="<?=$value;?>"><?=$value;?></option>
+                                        <?php foreach ($ClassRoom as $key => $v_ClassRoom): ?>
+                                        <option value="<?=$v_ClassRoom->Reg_Class;?>"><?=$v_ClassRoom->Reg_Class;?>
+                                        </option>
                                         <?php endforeach; ?>
                                     </select>
+                                    <small id="emailHelp" class="form-text text-muted">กรณีที่ไม่มีห้องเรียน
+                                        ให้เพิ่มห้องเรียนและครูที่ปรึกษาก่อน</small>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -49,9 +49,11 @@
                             <div class="form-group row">
                                 <label for="schestu_filename" class="col-sm-2 col-form-label"></label>
                                 <div class="col-sm-10">
-                                    <button type="submit" class="btn btn-lg btn-<?=$color?>  btn-block"><?=$icon?>
-                                        บันทึก</button>
+                                    <button type="submit"
+                                        class="btn btn-lg btn-<?=$color?>  btn-block"><?=$icon?>บันทึก</button>
+                               
                                 </div>
+
                             </div>
                         </form>
 
