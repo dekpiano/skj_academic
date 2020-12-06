@@ -23,24 +23,25 @@ var  $title = "ผลการเรียน";
                                     ->from('tb_register')
                                     ->where('StudentID',$this->session->userdata('login_id'))
                                     ->group_by('tb_register.RegisterYear')
-                                    ->order_by('tb_register.RegisterClass ASC','tb_register.RegisterYear ASC')
+                                    ->order_by('tb_register.RegisterClass asc','(tb_register.RegisterYear) asc')
                                     ->get()->result();
-
-        $data['scoreStudent'] = $this->db->select('tb_subjects.SubjectName,
-                                    tb_subjects.SubjectUnit,
-                                    tb_register.SubjectCode,
-                                    tb_register.StudentID,
-                                    tb_register.Score100,
-                                    tb_register.Grade,
-                                    tb_register.RegisterYear,
-                                    tb_register.RegisterClass')
+        
+        $data['scoreStudent'] = $this->db->select('tb_register.StudentID,
+                                        tb_register.SubjectCode,
+                                        tb_register.Score100,
+                                        tb_register.Grade,
+                                        tb_register.RegisterYear,
+                                        tb_register.RegisterClass,
+                                        tb_subjects.SubjectName,
+                                        tb_subjects.SubjectUnit,
+                                        tb_subjects.SubjectYear,
+                                        tb_subjects.FirstGroup')
                                     ->from('tb_register')
                                     ->join('tb_subjects', 'tb_register.SubjectCode = tb_subjects.SubjectCode')
                                     ->where('StudentID',$this->session->userdata('login_id'))
-                                    ->group_by('tb_subjects.SubjectCode')
-                                    ->order_by('tb_register.RegisterClass ASC','tb_register.RegisterYear ASC','tb_subjects.SubjectCode ASC')
+                                    ->order_by('tb_subjects.FirstGroup asc','tb_subjects.SubjectCode asc')
                                     ->get()->result();
-        //print_r($data['scoreStudent']); exit();
+       //echo '<pre>';print_r($data['scoreStudent']); exit();
         $data['CheckOnOff'] = $this->db->select('*')->from('tb_register_onoff')->get()->result();
         $this->load->view('user/layout/Header.php',$data);
         $this->load->view('user/PageAcademicResult.php');

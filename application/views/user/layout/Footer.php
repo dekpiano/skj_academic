@@ -17,7 +17,7 @@
    <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
    <script src="<?=base_url();?>assets/js/demo/style-switcher.js"></script>     
    
-   <?php echo $this->load->view('admin/layout/Alert.php'); ?>
+   <?php  $this->load->view('admin/layout/Alert.php'); ?>
 
 </body>
 </html> 
