@@ -169,6 +169,7 @@
                         <a href="<?=base_url('Login');?>" class="card-hover py-4 text-center d-block rounded">
                             <span class="bg-success-grediant"><i class="fas fa-calculator"></i></span>
                             <h6 class="ser-title">ผลการเรียน</h6>
+                            <small class="ser-title">อัพเดพข้อมูล 7/12/2563</small>
                         </a>
                     </div>
                 </div>
