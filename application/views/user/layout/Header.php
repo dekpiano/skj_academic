@@ -37,7 +37,7 @@
 
             <div id="navigation" class="collapse navbar-collapse flex-column">
                 <div class="profile-section pt-3 pt-lg-0">
-                    <img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/profile.png" alt="image">
+                    <img class="profile-image mb-3 rounded-circle mx-auto" src="<?=base_url('uploads/usericon.png')?>" alt="image">
 
                     <div class="bio mb-3"><?=$this->session->userdata('fullname');?><br>
                         <?=$this->session->userdata('class');?>
