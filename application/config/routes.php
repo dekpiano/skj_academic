@@ -71,3 +71,6 @@ $route['Login'] = "Control_login/Login_main";
 // User
 $route['Home'] = "user/ConUser_Home/Home";
 $route['AcademicResult'] = "user/ConAcademicResult/score";
+
+$route['Students'] = "user/ConStudents";
+$route['StudentsList'] = "user/ConStudents/StudentsList";
