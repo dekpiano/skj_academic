@@ -8,14 +8,14 @@
         
         <div class="row justify-content-center mt-3">
             <div class="col-4">
-            <form>
-                <select name="cars" class="custom-select">
-                    <option selected>ค้นหานักเรียน</option>
-                    <option value="volvo">Volvo</option>
-                    <option value="fiat">Fiat</option>
-                    <option value="audi">Audi</option>
-                </select>
-            </form>
+                <form>
+                    <select name="cars" class="custom-select">
+                        <option selected>ค้นหานักเรียน</option>
+                        <option value="volvo">Volvo</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </form>
             </div>
         </div>
     </section>
