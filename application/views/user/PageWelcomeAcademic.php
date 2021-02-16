@@ -187,12 +187,12 @@
                 <!-- Column -->
                 <div class="col-md-4  ">
                     <div class="card card-shadow border-0 mb-4">
-                        <a href="javascript:void(0)" class="card-hover py-4 text-center d-block rounded">
+                        <a href="<?=base_url('ExamSchedule');?>" class="card-hover py-4 text-center d-block rounded">
                             <span class="bg-success-grediant"><i class="far fa-calendar-alt"></i></span>
                             <h6 class="ser-title">ตารางสอบ</h6>
                         </a>
                     </div>
-                </div>     
+                </div>      
 
                  <!-- Column -->
                  <div class="col-md-4  ">

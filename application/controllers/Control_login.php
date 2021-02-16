@@ -85,7 +85,7 @@ class Control_login extends CI_Controller {
 					set_cookie('username_cookie',$username,'3600'); 
 					set_cookie('password_cookie',$password,'3600');
 
-					$this->session->set_userdata(array('login_id' => $result->pers_id,'fullname'=> $result->pers_prefix.$result->pers_firstname.' '.$result->pers_firstname,'status'=> 'admin'));
+					$this->session->set_userdata(array('login_id' => $result->pers_id,'fullname'=> $result->pers_prefix.$result->pers_firstname.' '.$result->pers_firstname,'status'=> 'admin','img' => $result->pers_img));
 
 				 redirect('AdminHome');
 					//echo "Yes";
@@ -96,7 +96,6 @@ class Control_login extends CI_Controller {
 					
 					$this->session->set_flashdata(array('msgerr'=> 'NO'));
 					// redirect('login');
-
 					redirect('Home', 'refresh');
 				}
 			}

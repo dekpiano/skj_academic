@@ -1,6 +1,4 @@
     <style>
-
-
 a,
 a:hover,
 a:focus,
@@ -259,24 +257,24 @@ ul {
     <div class="main-wrapper">
         <section class="cta-section theme-bg-light py-5">
             <div class="container text-center">
-                
+
                 <h2 class="heading">วิชาการยินดีต้อนรับ </h2>
                 <div class="intro">Welcome to Academic System</div>
-              
+
             </div>
             <!--//container-->
         </section>
         <section class="we-offer-area text-center ">
             <div class="container-fluid">
-         
+
                 <div class="row our-offer-items less-carousel mt-5">
                     <!-- Single Item -->
                     <div class="col-md-4 col-sm-6 equal-height">
                         <div class="item">
-						<i class="fas fa-calculator"></i>
+                            <i class="fas fa-calculator"></i>
                             <h4> <a href="<?=base_url('AcademicResult');?>">ผลการเรียน</a> </h4>
                             <p>
-                                ดูคะแนนสอบทั้งหมด 
+                                ดูคะแนนสอบทั้งหมด
                             </p>
                         </div>
                     </div>
@@ -288,7 +286,7 @@ ul {
                             <i class="fas fa-table"></i>
                             <h4>ตารางเรียน</h4>
                             <p>
-                               วิชาเรียนในแต่ละวัน
+                                วิชาเรียนในแต่ละวัน
                             </p>
                         </div>
                     </div>
@@ -296,21 +294,21 @@ ul {
 
                     <!-- Single Item -->
                     <div class="col-md-4 col-sm-6 equal-height">
-                        <div class="item">
-                            <i class="fas fa-table"></i>
-                            <h4>ตารางสอบ</h4>
-                            <p>
-                                ตารางสอบกลางภาคและปลายภาคเรียน
-                            </p>
+                        <div class="item">                           
+                                <i class="fas fa-table"></i>
+                                <h4>ตารางสอบ</h4>
+                                <p>
+                                    ตารางสอบกลางภาคและปลายภาคเรียน
+                                </p>
                         </div>
                     </div>
                     <!-- End Single Item -->
 
-               
+
                     <!-- End Single Item -->
                 </div>
             </div>
         </section>
-       
+
     </div>
     <!--//main-wrapper-->

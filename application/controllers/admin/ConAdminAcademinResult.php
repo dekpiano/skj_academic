@@ -14,7 +14,9 @@ var  $title = "แผงควบคุม";
     }
 
     public function AdminAcademinResultMain(){   
-
+        $DBpersonnel = $this->load->database('personnel', TRUE); 
+        $data['admin'] = $DBpersonnel->select('pers_id,pers_img')->where('pers_id',$this->session->userdata('login_id'))->get('tb_personnel')->result();
+        
         $data['title'] = "ผลการเรียน";	
         $data['checkOnOff'] = $this->db->select('*')->from('tb_register_onoff')->get()->result();
         $this->load->view('admin/layout/Header.php',$data);

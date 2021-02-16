@@ -35,6 +35,14 @@ var  $title = "แผงควบคุม";
         
     }
 
+    
+    public function ExamSchedule(){
+        $data['Exam'] = $this->db->order_by('exam_id','DESC')->limit(6)->get('tb_exam_schedule')->result();
+        $this->load->view('user/layout/HeaderUser.php',$data);
+        $this->load->view('user/PageExamSchedule.php');
+        $this->load->view('user/layout/Footer.php');
+    }
+
 
 
 }

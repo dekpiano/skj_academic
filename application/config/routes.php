@@ -62,6 +62,9 @@ $route['Admin/AcademicResult'] = "admin/ConAdminAcademinResult/AdminAcademinResu
 $route['Admin/ClassSchedule'] = "admin/ConAdminClassSchedule/AdminClassScheduleMain";
 $route['Admin/ClassSchedule/add'] = "admin/ConAdminClassSchedule/add";
 
+$route['Admin/ExamSchedule'] = "admin/ConAdminExamSchedule/AdminExamScheduleMain";
+$route['Admin/ExamSchedule/add'] = "admin/ConAdminExamSchedule/add";
+
 $route['Admin/ClassRoom'] = "admin/ConAdminClassRoom/AdminClassMain";
 
 // Login
@@ -71,6 +74,6 @@ $route['Login'] = "Control_login/Login_main";
 // User
 $route['Home'] = "user/ConUser_Home/Home";
 $route['AcademicResult'] = "user/ConAcademicResult/score";
-
+$route['ExamSchedule'] = "user/ConStudents/ExamSchedule";
 $route['Students'] = "user/ConStudents";
 $route['StudentsList'] = "user/ConStudents/StudentsList";

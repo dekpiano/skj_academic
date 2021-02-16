@@ -26,7 +26,11 @@
 <body style="font-family: 'Sarabun', sans-serif;" class="theme-bg-light ">
 
     <header class="header text-center">
-        <h1 class="blog-name pt-lg-4 mb-0"><a href="<?=base_url('Home');?>">งานนักเรียน</a></h1>
+    
+        <h1 class="blog-name pt-lg-4 mb-0">
+        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+        <a href="<?=base_url('Home');?>">งานนักเรียน SKJ</a>
+        </h1>
 
         <nav class="navbar navbar-expand-lg navbar-dark">
 
@@ -39,12 +43,16 @@
                 <div class="profile-section pt-3 pt-lg-0">
                     <ul class="navbar-nav flex-column text-left">
                         <li class="nav-item ">
-                            <a class="nav-link" href="<?=base_url('Students');?>"><i
+                            <a class="nav-link" href="<?=base_url('');?>"><i
                                     class="fas fa-home fa-fw mr-2"></i>หน้าแรก </a>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link" href="<?=base_url('StudentsList');?>"><i
                                     class="fas fa-calculator fa-fw mr-2"></i>รายชื่อนักเรียน </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="<?=base_url('ExamSchedule');?>"><i
+                                    class="fas fa-calculator fa-fw mr-2"></i>ตารางสอบ </a>
                         </li>
 
 

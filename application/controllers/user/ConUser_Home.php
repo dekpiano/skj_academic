@@ -25,10 +25,11 @@ var  $title = "แผงควบคุม";
         // $this->session->sess_destroy();
         
     }
-
-
-
 }
+
+
+
+
 
 
 ?>

@@ -79,7 +79,7 @@ header{
             <div id="navigation" class="collapse navbar-collapse flex-column">
                 <div class="profile-section pt-3 pt-lg-0">
                     <img class="profile-image mb-3 rounded-circle mx-auto"
-                        src="https://picsum.photos/id/<?=rand(200,300);?>/200/200" alt="image">
+                        src="https://skj.ac.th/uploads/personnel/<?=$admin[0]->pers_img;?>" alt="image">
 
                     <div class="bio mb-3"><?=$this->session->userdata('fullname');?><br>
                         <?=$this->session->userdata('class');?>
@@ -105,7 +105,7 @@ header{
                                     class="fas fa-table fa-fw mr-2"></i>ตารางเรียน </a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="<?=base_url('');?>"><i
+                            <a class="nav-link" href="<?=base_url('Admin/ExamSchedule');?>"><i
                                     class="fas fa-table fa-fw mr-2"></i>ตารางสอบ </a>
                         </li>
                         <li class="nav-item ">

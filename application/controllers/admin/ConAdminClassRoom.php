@@ -14,8 +14,8 @@ class ConAdminClassRoom extends CI_Controller {
 
     public function AdminClassMain(){   
 
-        $DBpersonnel = $this->load->database('personnel', TRUE);
-        
+        $DBpersonnel = $this->load->database('personnel', TRUE); 
+        $data['admin'] = $DBpersonnel->select('pers_id,pers_img')->where('pers_id',$this->session->userdata('login_id'))->get('tb_personnel')->result();
         
 		$data['title'] = "ห้องเรียน/ที่ปรึกษา";		
 		$this->db->select('*');
